@@ -1,0 +1,1996 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="ar" dir="rtl">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>أسود PHP | الأساسيات</title>
+	<link rel="stylesheet" href="doc/assets/css/documenter_style.css" media="all">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="doc/assets/bootstrap/css/bootstrap.min.css">
+	
+</head>
+<body class="documenter-project-mp-price" dir="rtl">
+	<div id="documenter_sidebar">
+		<h1 class="title">أسود PHP | الأساسيات</h1>
+			<ul id="documenter_nav">
+				<li><a class="current" href="#introd"> مقدمة </a></li>
+				<li><a href="#what_is_php"> ماهي لغة php ؟ </a></li>
+				<li><a href="#installation" title="installation">التثبيت علي جهاز الكمبيوتر؟</a></li>
+				<li><a href="#comments" title="comments">التعليقات</a></li>
+				<li><a href="#variables" title="variables"> المتغيرات والثوابت</a></li>
+				<li><a href="#data_types" title="data_types">العمليات الحسابية وأنواع البيانات</a></li>
+				<li><a href="#conditions" title="conditions">الشروط</a></li>
+				<li><a href="#loops" title="loops">الحلقات</a></li>
+				<li><a href="#function" title="function">الدوال</a></li>
+				<li><a href="#array" title="array">المصفوفات</a></li>
+				<li><a href="#tutorial-forms" title="tutorial-forms">التعامل مع النماذج (forms)</a></li>
+				<li><a href="#source" title="source">المصادر</a></li>
+				<li><a href="#other" title="other"> مقتطفات</a></li>
+			</ul>
+			<div  id="documenter_copyright">
+			 <a href="https://github.com/mahmoudsamyhosein">By:MSHM بواسطة محمود سامي حسين متولي</a>	
+			</div>
+		</div>
+	<div id="documenter_content">
+		<section id="introd">
+			<div class="text-center">
+				<h1> بسم الله الرحمن الرحيم </h1>
+				<h1> والصلاة والسلام علي أشرف المرسلين سيدنا محمد عليه أفضل الصلاة والسلام 
+					وأحمد الله جل وعلا الذي وفقني لهذا العمل </h1>
+				<h1>يتناول هذا الكتاب شرح لأساسيات لغة php </h1>
+				<h2> يجب أن تكون لديك خلفية بسيطة عن أساسيات css & html قبل متابعة هذا الكتاب</h2>
+				<h2><a href="https://mahmoudsamyhosein.github.io/PHP-OOP/">
+					لقراءة كتاب  أساسيات 
+					php oop </a> </h2>
+				<h2>
+				<a
+					href="https://scriptaty.com/shop/item/37be47/%D9%83%D8%AA%D8%A7%D8%A8-%D9%84%D8%B4%D8%B1%D8%AD-%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D9%83%D8%A7%D8%A6%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%AC%D8%A9-%D9%84%D8%BA%D8%A9-php">لتحميل
+					كتاب php oop</a>
+				</h2>
+				<p class="lead">
+					الهدف من أنشاء هذا الكتاب هو أنشاء مرجع عربي يشرح أخر أصدار للغة php
+					وأيضا يستطيع كلا من المبرمج المحترف والمبتدئ أن يعتمد علي هذا الكتاب في تعلم الاساسيات وبناء المشاريع
+					المتقدمة
+					أسال الله العظيم أن يجعل هذا الكتاب نافعا لكل قارئ حيث أنه تم الاقتصار علي ذكر الأمثلة العملية ببساطه بعيدا عن الكلام النظري  
+					كما كان يقول الدكتور أبراهيم الفقي رحمه الله علية 
+					لا يشكر الله من لا يشكر الناس 
+					أشكر أسامة الزيرو حيث أستطعت الوصول الي مستوي متقدم في البرمجة بفضله  وجميع المصادر الأخري التي أقتبست منها 	 
+				<p>
+			</div>
+			<hr>
+			<img src="doc/assets/images/php.png" alt="php-image-placeholder">
+			<hr>
+		</section>
+		<!-- ما هي لغة PHP -->
+		<section id="what_is_php">
+			<div class="page-header text-center">
+				<h3> ؟ ما معني الحروف الثلاثة المكونة للغة </h3>
+				<h3>PHP: Hypertext Preprocessor</h3>
+				<hr class="notop">
+				<p>هي لغة شائعة الأستخدام وتستخدم بكثرة في بناء تطبيقات الويب
+					والهدف الرئيسي منها هو أنشاء صفحات ويب ديناميكية
+					وهي أيضا لغة متعددة الاستعمالات مفتوحة المصدر وتوجد الالاف بل الملايين من المصادر التي تستطيع تعلم
+					اللغة منها
+					وقد كان اول ظهور للـ php في سنة 1994 من قبل الدنماركي راسموس لردورف Lerdorf Rasmus
+					الذي اسماها بـ Page Home Personal الصفحات الشخصية
+					واقتبس معظم اكوادها من لغة C و Java و Perl
+					ومنذ ذلك الوقت و PHP تعرف تطورا وتوسعا اكثر الى يومنا هذا حيث وصل عدد نسخ بي اتش بي الى النسخة 8
+					والتي اقل مايقال عنها انها اعطت مفهوما اخر في عالم تطبيقات الويب يتسم بالقوة.
+					وهي لغة برمجية مفسرة تستخدم في تطبيقات الويب، وتعمل على جانب الخادم وليس على جانب المستخدم اي هي خاصة بالمواقع
+					الديناميكية
+				</p>
+			</div>
+			<hr>
+
+		</section>
+		<section>
+			<div id="tutorial-forms" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title">التعامل مع الأستمارة أو الفورم في لغة php </h1>
+				</div>
+				<p class="para text-center">
+					من أهم مميزات لغة
+					php
+					طريقة تعاملها مع أستمارات
+					html
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #1 فورم بسيط</strong></p>
+						</div>
+						<div class="example-contents">
+							<div class="htmlcode text-center">
+								<pre class="htmlcode">  &lt;form action=&quot;action.php&quot; method=&quot;post&quot;&gt;
+														&lt;p&gt;أسمك: &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/p&gt;
+														&lt;p&gt;عمرك: &lt;input type=&quot;text&quot; name=&quot;age&quot; /&gt;&lt;/p&gt;
+														&lt;p&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/p&gt;
+														&lt;/form&gt;
+								</pre>
+							</div>
+						</div>
+
+					</div>
+				</p>
+				<p class="para">
+					ليس هناك أي شيء خاص بخصوص هذه الفورم فهو بسيط وعادي جدا فهو فورم مكتوب بلغه html
+					وليس هناك أي وسوم من أي نوع عندما يقوم المستخدم بملء الاستمارة والضغط علي زر أرسال submit , الملف
+					<var class="filename">action.php</var> يتم أستدعاءة وفي هذا الملف سوف يتم كتابة شيء كهذا
+				</p>
+				<p class="para">
+					<div class="example" id="example-8">
+
+						<div class="example-contents">
+							<div class="phpcode"><code><span style="color: #000000">
+										مرحبا&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span><span
+											style="color: #007700">echo&nbsp;</span><span
+											style="color: #0000BB">htmlspecialchars</span><span
+											style="color: #007700">(</span><span
+											style="color: #0000BB">$_POST</span><span
+											style="color: #007700">[</span><span
+											style="color: #DD0000">'name'</span><span
+											style="color: #007700">]);&nbsp;</span><span
+											style="color: #0000BB">?&gt;</span>.<br />عمرك&nbsp;هو&nbsp;<span
+											style="color: #0000BB">&lt;?php&nbsp;</span><span
+											style="color: #007700">echo&nbsp;(int)</span><span
+											style="color: #0000BB">$_POST</span><span
+											style="color: #007700">[</span><span
+											style="color: #DD0000">'age'</span><span
+											style="color: #007700">];&nbsp;</span><span
+											style="color: #0000BB">?&gt;</span>&nbsp;سنة&nbsp;</span>
+								</code></div>
+						</div>
+
+						<div class="example-contents">
+							<p>
+								خرج طباعة هذا المثال سوف يكون مثل هذا
+							</p>
+						</div>
+						<div class="example-contents screen">
+							<div class="cdata">
+								<pre>
+													.مرحبا , عمرك هو 22 سنة 
+								</pre>
+							</div>
+
+						</div>
+					</div>
+				</p>
+
+			</div>
+		</section>
+		<!--/ ما هي لغة PHP -->
+
+		<!-- التثبيت علي جهاز الكمبيوتر؟ -->
+			<section id="installation">
+				<div class="page-header text-center">
+					<h3 class="title"> التثبيت علي جهاز الكمبيوتر ؟ </h3>
+					<hr>
+					<video src="doc/assets/video/1.mp4" controls="true"></video>
+				</div>
+				<hr>
+			</section>
+		
+		<!--/ التثبيت علي جهاز الكمبيوتر؟ -->
+
+
+		<!-- التعليقات في لغة PHP -->
+		<section>
+			<div id="comments" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title">التعليقات في لغة php </h1>
+				</div>
+				<p class="para text-center">
+
+					حسنا ، نفترض لدينا كود برمجي بلغة بي اتش بي او اي لغة برمجة اخرى واردنا التعديل فيه ، في الواقع
+					سيصعب علينا ذلك في حالة عدم
+					وجود تعليقات وارشادات داخل هذا الكود الااننا سنحير ونحن نبحث عن السطر المراد تعديله في هذا الكود،
+					لكن إذا وجدت تعليقات وارشادات
+					بداخل هذا الكود فسيسهل الأمر علينا قليلا إذ اننا سنكتفي بقراءة التعليقات المختصرة وهذا افضل من قراءة
+					اسطر طويلة من كود معني .
+					ومن هنا نعرف التعليق في لغتنا المدروسة على انه عبارة عن نص نكتب فيه شيئا له دلالة على اسطر من كود
+					معني حتى يسهل الرجوع
+					اليها، وهذا النص ليتم ترجمته لاي صيغة اخرى لن يظهر الكود عند فتح الكود اي source الصفحة.
+					ولكتابة تعليق في بي اتش بي نستعمل هذا الرمز
+					// نكتب التعليق المراد بعد هذا الرمز شريطة الا يتجاوز التعليق سطرا واحدا فقط.
+					# أو أستخدام رمز
+					او نستعمل هذا الرمز في حالة كان لدينا تعليق طويل يتكون من عدة اسطر ، نشرح فيها امر ما مثال بالتفصيل:
+					/*
+					التعليق المراد
+					اكتب التعليق الذي تريده بعدد االسطر التي تريد
+					و لا تنسى ان تغلق الرمز دلالة على انتهاء التعليق هكذا
+					*
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #1</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #007700">// السلام عليكم أنا تعليق سطري &nbsp;</span>
+												<br> <span style="color: #0000BB">echo "مرحبا , أسمي هو محمود";</span>
+												<br> <span style="color: #007700">#وهذا ايضا تعليق علي سطر واحد </span>
+												<br> <span style="color: #0000BB"> print " أحب العمل بلغة php" ; </span>
+												<br> <span style="color: #007700">/* تعليق متعدد الأسطر
+												</span><br /><span style="color: #007700">* سطر واحد</span><br /><span
+													style="color: #007700">* سطر رقم أثنين</span><br /><span
+													style="color: #007700">*/</span><br /><span
+													style="color: #0000BB">echo "لقد تعلمت التعليقات في لغة php
+													";</span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											مرحبا , أسمي هو محمود أحب العمل بلغة phpلقد تعلمت التعليقات في لغة php
+										</pre>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>تمرين
+										يمكنك أستخدام الأمر التالي
+										لعمل مسافة بين الكلمات المطبوعة بالوسم
+										<div class="htmlcode">
+											<pre class="htmlcode">
+											echo '&lt; br>';
+										</pre>
+										</div>
+									</p>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا التمرين سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											مرحبا , أسمي هو محمود
+											أحب العمل بلغة php
+											لقد تعلمت التعليقات في لغة php
+										</pre>
+									</div>
+								</div>
+							</div>
+						</p>
+					</div>
+				</p>
+			</div>
+		</section>
+		<!--/ التعليقات في لغة PHP  -->
+
+		<!-- المتغيرات variables PHP -->
+		<section>
+			<div id="variables" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title">المتغيرات والثوابت في php  </h1>
+				</div>
+				<p class="para text-center">
+					من العناصر الرئيسية في أي لغة
+					ووظيفتها تخزين المعلومات في الذاكرة بصورة مؤقتة
+					ويتكون المتغير من عنصرين أساسين هما
+					- الاسم : وهو يدل على اسم معني نختاره نحن لـ متغير نريد استعماله.
+					- والقيمة: وهي المعلومة التي نريد ان يحملها المتغير والتي تتحول.
+					و يجب ان ننسى ان المتغيرات التي ننشيء يجب ان تبتدأ بعلامة الدولار : $
+					وكمسلمة : اي اسم يبتدأ بعلامة الدولار $ هو عبارة عن متغير.
+				</p>
+				<p style="background-color: yellow;">
+				الثوابت ومن معناها ما هي كلمة محجوزة في اللغه وظيفتها تخزين قيمة واحدة فقط في الذاكرة لا يمكن أن تتغير 
+				 const
+				</p>
+				<p class="para">
+					<div class="example" id="example-8">
+						<div class="example-contents">
+							<div class="phpcode"><code><span style="color: #000000">
+										&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+											style="color: #0000BB"> const FIRST_NAME= "اسمي هو محمود "; &nbsp;</span> <br> <span
+											style="color: #0000BB"> echo FIRST_NAME; </span> <br> </span>
+								</code></div>
+						</div>
+
+						<div class="example-contents">
+							<p>
+								خرج طباعة هذا المثال سوف يكون مثل هذا
+							</p>
+						</div>
+						<div class="example-contents screen">
+							<div class="cdata">
+								<pre>
+									اسمي هو محمود
+								</pre>
+							</div>
+						</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-8">
+						<div class="example-contents">
+							<div class="phpcode"><code><span style="color: #000000">
+										&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+											style="color: #0000BB"> const FIRST_NAME= "اسمي هو محمود "; &nbsp;</span> <br> <span
+											style="color: #0000BB"> const FIRST_NAME= "اسمي هو أبراهيم "; &nbsp;</span> <br> <span
+										  	style="color: #007700">#عند تغيير قيمة الثابت سوف يحدث خطأ &nbsp;</span> <br> <span
+											style="color: #0000BB"> echo FIRST_NAME; </span> <br> </span>
+								</code></div>
+						</div>
+
+						<div class="example-contents">
+							<p>
+								خرج طباعة هذا المثال سوف يكون مثل هذا
+							</p>
+						</div>
+						<div class="example-contents screen">
+							<div class="cdata">
+								<pre>
+									Notice: Constant FIRST_NAME already defined in on line 3
+									اسمي هو محمود
+								</pre>
+							</div>
+						</div>
+				</p>
+				<section>
+
+					<div class="page-header text-center">
+						<h3> أنواع المتغيرات في لغة php </h3>
+						<hr class="notop">
+					</div>
+					<p class="text-center">القصد هنا هو أنواع البيانات التي يمكن تخزينها في المتغيرات</p>
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary"></h6>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+									<thead>
+										<tr>
+											<th scope="col">string</th>
+											<th scope="col">int</th>
+											<th scope="col">float</th>
+											<th scope="col">bool</th>
+											<th scope="col">null</th>
+											<th scope="col">array</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>هذا النوع من المتغيرات خاص بالنصوص والقيمة بهذا النوع تكون دائمة بين
+												علامتي تنصيص مزدوجة او فردية</td>
+											<td> الارقام الطبيعية أو الصحيحة</td>
+											<td>وهي الارقام التي تحتوي على الفاصلة العشرية</td>
+											<td>هو متغير منطقي يحتمل اكثر من قيمتين: false or true </td>
+											<td>قيمة فارغة يعني عندما ننشىء متغير ونعطيه اي قيمة فيكون هذا المتغير فارغ
+											</td>
+											<td> راجعها في قسم المصفوفات </td>
+										</tr>
+									</tbody>
+								</table>
+								<div>
+									<p>
+										<h1> ملاحظات مهمة : </h1>
+										<p> هناك قواعد عند كتابة المتغيرات يجب ان يتم مراعتها </p>
+										<p>
+											1 -جميع اسماء المتغيرات لا يجب ان تبتدأ برقم بعد علامة الدولار مباشرة
+											، مسموح يحتوي الاسم على رقم لكن الغير مسموح به هو ان
+											يكون هذا الرقم هو الأول في الأسم </p>
+										<p>
+											2-اسماء المتغيرات حساسة لوضعية الأحرف فالمتغير
+											$name ليس هو المتغير $Name </p>
+										<p> 3-امكانية استخدام العلامة : _ علامة underscore في بداية او داخل اسم المتغير
+											لكن يرجي ملاحظة انه هناك متغيرات محجوزة في اللغه لا يمكن أستخدامهاو تسمي
+											بالسوبر جلوبال super global variables ويحتوي الجدول التالي عليها
+										</p>
+										<div class="card shadow mb-4">
+											<div class="card-header py-3">
+												<h6 class="m-0 font-weight-bold text-primary"></h6>
+											</div>
+											<div class="card-body">
+												<div class="table-responsive">
+													<table class="table table-bordered" id="dataTable" width="100%"
+														cellspacing="0">
+														<thead>
+															<tr>
+																<th scope="col">$GLOBALS</th>
+																<th scope="col">$_SERVER</th>
+																<th scope="col">$_GET</th>
+																<th scope="col">$_POST</th>
+																<th scope="col">$_FILES</th>
+																<th scope="col">$_REQUEST</th>
+																<th scope="col">$_SESSION</th>
+																<th scope="col">$_ENV</th>
+																<th scope="col">$_COOKIE</th>
+																<th scope="col">$php_errormsg</th>
+																<th scope="col">$http_response_header</th>
+																<th scope="col">$argc</th>
+																<th scope="col">$argv</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>المصفوفة An associative array هي مصفوفة مفتاحية أو
+																	تجميعية تحتوي علي مرجعية لكل المتغيرات التي قد تم
+																	تعريفها في المنظار العام للأسكربت . وأسماء المتغيرات
+																	هي مفتاح هذه المصفوفة.
+																</td>
+																<td> المدخلات في هذه المصفوفة تم أنشائها بواسطة الخادم
+																	وليس هناك أي ضمانه علي انه اي خادم ويب سوف يزودك
+																	بهذه المعلومات سوف تجد المزيد من المعلومات بخصوص هذا
+																	في التوثيق الرسمي ل CGI/1.1 specification , هي
+																	مصفوفة تحتوي علي معلومات كا الهيدرز والمسارات واماكن
+																	الاسكربتات </td>
+																<td>HTTP GET variables </td>
+																<td>HTTP POST variables</td>
+																<td>HTTP File Upload variables</td>
+																<td> HTTP Request variables </td>
+																<td>Session variables</td>
+																<td>Environment variables</td>
+																<td>HTTP Cookies</td>
+																<td>The previous error message</td>
+																<td>HTTP response headers</td>
+																<td>The number of arguments passed to script </td>
+																<td>Array of arguments passed to script</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<p></p>
+									</p>
+								</div>
+				</section>
+
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال المتغيرات #1</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB"> $name ='yassine'; &nbsp;</span> <br> <span
+													style="color: #0000BB"> $age = '22 سنة'; </span> <br> <span
+													style="color: #0000BB"> echo $name,$age; </span> <br> <span
+													style="color: #0000BB"> $age = '12 سنة'; </span> <br> <span
+													style="color: #0000BB"> echo $age , $name; </span><br /><span
+													style="color: #007700"> الخرج الان سوف يكون 12 سنة#</span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata">
+										<pre>
+											22 سنة12 سنةyassine
+										</pre>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p> تمرين المتغيرات
+										أكتب متغيرات تحمل القيم التالية
+										<div class="htmlcode">
+											<pre class="htmlcode">
+											name,age,city,country
+										</pre>
+										</div>
+									</p>
+									<div class="example-contents">
+										<p> ثم قم بأستخدام هذه المتغيرات لطباعه الجملة التالية
+											<div class="htmlcode">
+												<pre class="htmlcode">
+												.أسمي هو محمود عمري هو 27 عام أعيش في القاهرة وأنا من مصر 
+											</pre>
+											</div>
+										</p>
+									</div>
+									<div class="example-contents">
+										<p> الكود المستخدم في هذا التمرين هو
+											<div class="htmlcode">
+												<div class="phpcode"><code><span style="color: #000000">
+															&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span>
+															<br> <span style="color: #0000BB"> $name ='mahmoud';
+																&nbsp;</span> <br> <span style="color: #0000BB"> $age =
+																'27 عام'; </span> <br> <span style="color: #0000BB">
+																$country = 'مصر';</span> <br> <span
+																style="color: #0000BB"> $city = 'القاهرة'; </span> <br>
+															<span style="color: #0000BB"> print " .أسمي هو $name عمري هو
+																$age أعيش في $city و أنا من $country ";<br><span
+																	style="color: #007700"># ملاحظة : انة تم وضع الكود
+																	بين علامتي تنصيص وذلك حتي تستطيع كتابه المتغيرات
+																	بداخل الكود </span>
+													</code></div>
+											</div>
+											<p class="text-center"> جرب أستخدام علامة التنصيص الأحادية ولنري ماذا سوف
+												يحدث عند الطباعة </p>
+											<div class="htmlcode">
+												<pre class="htmlcode">
+													.أسمي هو $name عمري هو $age أعيش في $city و أنا من $country 
+												</pre>
+											</div>
+										</p>
+										<p class="text-center"> سؤال : لكن لماذا حدث هذا؟
+										</p>
+										<p class="text-center"> بكل بساطة علامتي التنصيص الثنائية تستخدم فيما يسمي
+											بالهروب من html 
+
+										</p>
+										
+									</div>
+									
+								</div>
+
+
+							</div>
+						</p>
+					</div>
+				</p>
+			</div>
+		</section>
+		<!-- المتغيرات variables PHP -->
+
+		<!-- العمليات الحسابية  -->
+		<section>
+			<div id="data_types" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title"> العمليات الحسابية الأساسية في لغة php </h1>
+				</div>
+				<p class="para text-center">
+					<p> *:الضرب </p>
+					<p> /:القسمة </p>
+					<p> -:الطرح </p>
+					<p> +:الجمع </p>
+					<p> %:باقي القسمة </p>
+				</p>
+
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p class="text-center"><strong>مثال #1</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB"> $number_1 = 10; &nbsp;</span> <br> <span
+													style="color: #0000BB"> $number_2 = 5;</span> <br> <span
+													style="color: #007700"> // عملية الجمع</span> <br> <span
+													style="color: #0000BB"> $sum = $number_1 + $number_2;</span> <br>
+												<span style="color: #007700">// عملية الطرح </span><br /><span
+													style="color: #0000BB"> $subtraction = $number_1 - $number_2;</span>
+												<br> <span style="color: #007700">// عملية الضرب</span><br /><span
+													style="color: #0000BB">$multiplication = $number_1 * $number_2
+													;</span> <br> <span style="color: #007700">// عملية القسمة
+												</span><br /><span style="color: #0000BB"> $division = $number_1 /
+													$number_2 ;</span> <br> <span style="color: #007700">// عملية باقي
+													القسمة</span><br /><span style="color: #0000BB"> $rest_division =
+													$number_1 % $number_2 ;</span> <br> <span style="color: #007700">//
+													&lt;'/br'> من وسوم html وتستخدم للطباعة </span> <br /><span
+														style="color: #0000BB"> echo "$sum , $subtraction ,
+														$multiplication , $division , $rest_division"; </span>
+												</span>
+										</code></div>
+								</div>
+							</div>
+							<div class="example-contents">
+								<p>
+									خرج طباعة هذا المثال سوف يكون مثل هذا
+								</p>
+							</div>
+							<div class="example-contents screen">
+								<div class="cdata ">
+									<pre>
+											15 , 5 , 50 , 2 , 0
+										</pre>
+								</div>
+							</div>
+
+
+					</div>
+		</section>
+		<!--  العمليات الحسابية  -->
+
+		<!-- مقتطفات -->
+		<section id="other">
+			<h1 class="title">مقتطفات</h1>
+			<h1 class="text-center"> 1-الفرق بين print , echo
+				<p>
+					الفرق الجوهري بين print و echo
+					هو ان echo هي الأكثر أستعمالا
+					وذلك لانها أسرع في الطباعه بحسب التوثيق الرسمي للغة
+					وأيضا يمكنك بأستخدام echo طباعه العديد من القيم
+					وهذا هو مثال للتوضيح
+					<p class="para">
+						<div class="example" id="example-7">
+							<div>
+								<p class="text-center"><strong> مثال لتوضيح الفرق بين print و echo </strong></p>
+							</div>
+							<p class="para">
+								<div class="example" id="example-8">
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+														style="color: #0000BB"> echo " اسمي هو محمد " , " أعمل كمبرمج
+														php" ; &nbsp;</span> <br> <span style="color: #0000BB"> print "
+														اسمي هو محمد " , " أعمل كمبرمج php" ; </span> <br> <span
+														style="color: #007700"> // print سوف تحدث خطأ بينما echo سوف
+														تعمل </span> <br> <span style="color: #0000BB"> </span>
+												</span>
+											</code></div>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											Parse error: syntax error, unexpected  ',' error  on line 3
+										</pre>
+									</div>
+									<div class="example-contents">
+										<p>
+											أذا قمت بتعليق الكود الخاص ب
+											print
+											سوف يكون الخرج الخاص بك كالتالي
+										</p>
+									</div>
+									<div class="example-contents screen">
+										<div class="cdata ">
+											<pre>
+												اسمي هو محمد أعمل كمبرمج php
+											</pre>
+										</div>
+									</div>
+							</p>
+			</h1>
+			<h1 class="text-center"> 2-عامل الربط - (concatenation)
+				<p>
+					يمكنك أستخدام عامل الربط للربط بين كلا من نص ونص متغير وأخر
+					<p class="para">
+						<div class="example" id="example-7">
+							<div>
+								<p class="text-center"><strong>مثال للتوضيح  عامل الربط #1</strong></p>
+							</div>
+							<p class="para">
+								<div class="example" id="example-8">
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span 
+														style="color: #0000BB">&lt;?php&nbsp;</span><br><span
+														style="color: #0000BB">echo  "أسمي هو" . "أبراهيم" . "أعمل كمحساب";</span> <br> <span
+														style="color: #007700"></span> <br> <span 
+														style="color: #0000BB"><br></span>
+												</span>
+											</code></div>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											أسمي هوأبراهيمأعمل كمحساب
+										</pre>
+									</div>
+								</div>
+								<div class="example" id="example-8">
+									<div>
+										<p class="text-center"><strong>مثال للتوضيح  عامل الربط #2</strong></p>
+									</div>
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span 
+														style="color: #0000BB">&lt;?php&nbsp;</span><br><span
+														style="color: #0000BB">$name="أبراهيم"; $job="محاسب";</span> <br> <span
+														style="color: #0000BB">$job="محاسب";</span> <br> <span  
+														style="color: #0000BB">echo "أسمي هو" . " " . $name ." " . "أعمل ك" . $job  ." ";</span> <br> <span></span>
+												</span>
+											</code></div>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>
+									خرج طباعة هذا المثال سوف يكون 
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											أسمي هو أبراهيم أعمل كمحاسب
+										</pre>
+									</div>
+								</div>
+								
+							</p>
+			</h1>
+		</section>
+		<!--/ مقتطفات -->
+
+		<!-- الشروط -->
+		<section id="conditions">
+			<h1 class="title">الشروط</h1>
+			<h1 class="text-center">
+				<p>
+					في كثير من المرات في صفحات الويب التي ننجزها نلجأ الى ربط اشياء متعددة باوامر معينة ، يعني نقول
+					للمتصفح: إذا حدث هذا الشيء قم
+					بالأمر التالي
+					على سبيل المثال نريد في صفحة من صفحات مواقعنا إذا كان اليوم جمعة تظهر جملة: جمعة مباركة ان شاء الله،
+					وإذا كان غير يوم الجمعة
+					يظهر شيء أخر .
+					وهذا هو معنى الشرط في بي اتش بي ببساطة ، اي نعطي امرا يكون مربوطا بشرط معني ، إذا تحقق الأمر وإذا لم
+					يتحقق فنفذ الأمر
+					التالي
+					إذا فما هي الصيغة العامة لكتابة شرط في بي اتش بي؟؟
+					الصيغة العامة للشرط :
+					تختلف كتابة الشرط بحسب شكل هذا الشرط.
+					فممكن ان يكون شكل الشرط مجرد شرط واحد نربطه بامر معني وانتهى ، وممكن ان يكون شرط واحد نربطه بامرين ،
+					الأول إذا تحقق، والثاني إذا
+					لم يتحقق، يعني نقول إذا تحقق الشرط كذا وكدا فأفعل كدا وكدا ، وإذا لم يتحقق فأفعل كدا..
+					وهناك اشكال اخرى سوف نتعرض اليها ونعطي صيغة كتابة كل منها فالمرجو الانتباه في الأمر في غاية الأهمية.
+					الصيغة if
+					هي الدالة التي تمكننا من وضع الشرط وتعني إذا وهي اول شيء نبدأ به في وضع الشرط فنكتب هكذا:
+					<pre>
+				(نكتب الشرط الذي نريده)if
+				{
+				هنا نكتب الأمر الذي نريد تحققة في حالة كان الشرط صحيحا
+				}
+				</pre>
+
+					<p class="para">
+						<div class="example" id="example-7">
+							<div>
+								<p class="text-center"><strong>(if)مثال#1أستخدم العبارة </strong></p>
+							</div>
+							<p class="para">
+								<div class="example" id="example-8">
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+														style="color: #0000BB"> $length = 175;&nbsp;</span> <br> <span
+														style="color: #0000BB"> if($length = 175){&nbsp;</span> <br>
+													<span style="color: #0000BB">print "طولك هو $length سم "; </span>
+													<br> <span style="color: #0000BB">}</span> <br> <span
+														style="color: #007700">//قم بطباعه العبارة التالية 175 أذا كان
+														الطول هو </span>
+												</span>
+											</code></div>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											طولك هو 175 سم
+										</pre>
+									</div>
+
+								</div>
+								<pre>
+								كما نلاحظ جميعا بانه وضعنا شرط وقلنا فيه إذا كان المتغير length  يساوي 175
+								فاطبع الجملة : طولك هو 
+								وكما نلاحظ  ملاحظة اخرى بالنسبة للرموز التي نضعها داخل الشرط وهي:
+								== : وهذا الرمز ليس كالرمز "=" واحدة ، هنا "==" مرتين ، ونعني بهذا "إذا وافق الشرط كدا..."
+								> :
+								الرمز اصغر قطعا من ..
+
+								&lt; :
+								الرمز اكبر قطعا من ...
+
+								>= :
+								اصغر من او يساوي..
+
+								&lt;=:
+								اكبر من او يساوي..
+
+								!= :
+								نفي يوافق او  لا يوافق
+
+								لذا يرجى الانتباه في وضع الرموز ومعانيها.
+							</pre>
+
+						</div>
+					</p>
+					<p class="para">
+						<div class="example" id="example-7">
+							<div>
+								<p class="text-center"><strong> (if else ) مثال#1أستخدم العبارة </strong></p>
+								<p>هنا نأتي لشكل اخر من اشكال كتابة الشرط ، ففي الصيغة السابقة ربطنا شرط واحد بامر واحد.
+									لكن ماذا لو لم يتحقق الشرط في المثال السابق ؟
+									الذي كان سيقع ببساطة انه لن يظهر اي شيء وفي هذه الحالة لن يفهم اي شيء انه اصلا لن
+									يعرف الشخص الزائر هل كان هنالك شرط في
+									الأساس أم لا
+									وعليه ففي هذا الشكل سنرى كيف نضيف امر ثاني نربطه في حالة لم يتحقق الشرط.
+									وطريقة كتابة هذه الصيغة هي
+									(الشرط)if
+									}
+									الأمر المرتبط بتحقق الشرط
+									{
+									else
+									}
+									الأمر المرتبط بعدم تحقق الشرط
+									{
+								</p>
+							</div>
+							<p class="para">
+								<div class="example" id="example-8">
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+														style="color: #0000BB"> $length = 179;&nbsp;</span> <br> <span
+														style="color: #0000BB"> if($length >= 175){&nbsp;</span> <br>
+													<span style="color: #0000BB">print "طولك هو $length سم "; </span>
+													<br> <span style="color: #0000BB">}else{</span> <br> <span
+														style="color: #0000BB"> print "طولك غير صحيح";</span> <br> <span
+														style="color: #0000BB">}</span> <br> <span
+														style="color: #007700">//اذا كان طولك أكبر من أو يساوي 179 والأ
+														أطبع طولك غير صحيح</span>
+												</span>
+											</code></div>
+									</div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+										طولك غير صحيح
+									</pre>
+									</div>
+
+								</div>
+								<p>اكيد نعرف ماذا سيعطي هذا المثال، سنحصل على الجملة : طولك غير مناسب
+									الأن الشرط لم يتحقق ، وعليه فلأمر الذي سيحصل هو المرتبط بعدم تحقق الشرط
+									تذكير: المرجو تطبيق هذه الأمور واعادة قراءة ماجاء في الدرس مع محاولة تغير الأرقام
+									التي جاءت في الأمثلة حتى يتسنى لكم اكتشاف امور
+									اخرى .
+									جيد حتي الان، نبقى مع نفس المثال الأخير ونلاحظ اننا ربطنا شرط واحد بامرين، الأول في
+									حالة تحقق الشرط ، والثاني في حالة عدم تحقق
+									الشرط.
+									لكن ماذا لو اردنا وضع شرط ثاني في حالة عدم تحقق الشرط الأول ونربطه بالأمر الثاني،
+									يعني نقول: إذا تحقق الشرط الأول فاننا نأمر بالأمر كدا وكدا، وإذا لم يتحقق وكان كدا
+									وكدا.. )لاحظ هنا الشرط الثاني( فافعل الامر كدا وكدا..
+									اعرف ان الامر قد يبدو مستعصي لدى البعض لذلك سنأخذ مثال وان شاء الله تتوضح الأمور
+									للجميع</p>
+								<p class="para">
+									<div class="example" id="example-8">
+										<div class="example-contents">
+											<div class="phpcode"><code><span style="color: #000000">
+														&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br>
+														<span style="color: #0000BB"> $length = 79;&nbsp;</span> <br>
+														<span style="color: #0000BB"> if($length &lt;= 78){&nbsp;</span>
+																<br> <span style="color: #0000BB">print "مقاسك مناسب ";
+																</span> <br> <span
+																	style="color: #0000BB">}elseif($length ==
+																	79){</span> <br> <span style="color: #0000BB"> print
+																	"طولك غير صحيح";</span> <br> <span
+																	style="color: #0000BB">}</span> <br> <span
+																	style="color: #0000BB">else{</span> <br> <span
+																	style="color: #0000BB"> print "مقاس مناسب";</span>
+																<br> <span style="color: #0000BB">}</span> <br> </span>
+													</span>
+												</code></div>
+										</div>
+									</div>
+									<div class="example-contents">
+										<p>
+											خرج طباعة هذا المثال سوف يكون مثل هذا
+										</p>
+									</div>
+									<div class="example-contents screen">
+										<div class="cdata ">
+											<pre>
+												طولك غير صحيح
+											</pre>
+										</div>
+										<p>وكما نلاحظ فقد استخدمنا الصيغة elseif التي فرضنا فيها شرط ثاني في حالة لم
+											يتحقق الشرط الأول
+											بما ان الشرط الأول لم يتحقق والشرط الثاني تحقق فان الجملة المرتبطة بالشرط
+											الثاني هي التي ستحصل.
+										</p>
+									</div>
+
+									<p class="para">
+										<div class="example" id="example-7">
+											<div>
+												<p class="text-center"><strong> شكل الشروط المتعددة </strong></p>
+												<p>يمكننا ان نضع اكثر من شرط في امر واحد لكن باستعمال رموز جديدة وهي:
+													"AND : وتعني "و" ولها رمز اخر وهو && "
+													"OR : وتعني "او" لها ايضا رمز اخر || "
+													"نأخد مثال لهذا الشكل حتى نفهم اكثر "
+												</p>
+											</div>
+											<p class="para">
+												<div class="example" id="example-8">
+													<div class="example-contents">
+														<div class="phpcode"><code><span style="color: #000000">
+																	&nbsp;<span
+																		style="color: #0000BB">&lt;?php&nbsp;</span>
+																	<br> <span style="color: #0000BB"> $name='محمد';
+																		$age=99; &nbsp;</span> <br> <span
+																		style="color: #0000BB"> $age=99; &nbsp;</span>
+																	<br> <span style="color: #0000BB"> if($name ==
+																		'محمد' && $age==99 ){&nbsp;</span> <br> <span
+																		style="color: #0000BB">echo "true"; </span> <br>
+																	<span style="color: #0000BB">}else{</span> <br>
+																	<span style="color: #0000BB"> echo "false";</span>
+																	<br> <span style="color: #0000BB">}</span> <br>
+																</span>
+
+																</span>
+															</code></div>
+													</div>
+												</div>
+												<div class="example-contents">
+													<p>
+														خرج طباعة هذا المثال سوف يكون مثل هذا
+													</p>
+												</div>
+												<div class="example-contents screen">
+													<div class="cdata ">
+														<pre>
+															true
+														</pre>
+														<p>وهنا بما ان كل الشروط متحققه فان الأمر المرتبط بهما سوف يتحقق
+															اي ماسنحصل عليه هنا هو الكلمة : true
+														</p>
+													</div>
+
+												</div>
+												<p> مثال أخر </p>
+												<p class="para">
+													<div class="example" id="example-8">
+														<div class="example-contents">
+															<div class="phpcode"><code><span style="color: #000000">
+																		&nbsp;<span
+																			style="color: #0000BB">&lt;?php&nbsp;</span>
+																		<br> <span style="color: #0000BB"> $name='محمد';
+																			$age=99; &nbsp;</span> <br> <span
+																			style="color: #0000BB"> $age=99;
+																			&nbsp;</span> <br> <span
+																			style="color: #0000BB"> if($name == 'محمد'
+																			OR $age==99 ){&nbsp;</span> <br> <span
+																			style="color: #0000BB">echo "true"; </span>
+																		<br> <span style="color: #0000BB">}else{</span>
+																		<br> <span style="color: #0000BB"> echo
+																			"false";</span> <br> <span
+																			style="color: #0000BB">}</span> <br> </span>
+
+																	</span>
+																</code></div>
+														</div>
+													</div>
+													<div class="example-contents">
+														<p>
+															خرج طباعة هذا المثال سوف يكون مثل هذا
+														</p>
+													</div>
+													<div class="example-contents screen">
+														<div class="cdata ">
+															<pre>
+																	true
+																</pre>
+														</div>
+														<p>سنحصل على true ككذلك ان هنا اشترطنا تحقق احد الشرطين وبما ان
+															الشرط الأول قد تحقق فذلك كافي لأظهار الأمر المرتبط بالشرط..
+															اكيد تتعدي اشكال كتابة الشروط فيمكننا ان نعقد اكثر من هذا
+															ونضع شرط داخل شرط داخل شروط داخل شروط مربوطة باوامر وما الى
+															ذلك
+															، لست ادرى كيف يفكر كل منا وفي نوع الشروط التي يريد ان يضع
+															ولكن هذا هو الشيء الأساسي في كتابة الشروط وهذا مايجب ان
+															يفهم.
+
+														</p>
+													</div>
+													<p class="para">
+														<div class="example" id="example-7">
+															<div>
+																<p class="text-center"><strong>(switch)مثال#1أستخدم
+																		العبارة </strong></p>
+																<P>صيغة اخرى لوضع الشروط : الأمر switch
+																	يعد الأمر او الدالة switch مثل الأمر if و else لكن
+																	هذا الأمر اكثر مرونة .
+																	وسنأخذ مثال لطريقة استخدامه.
+																</P>
+															</div>
+															<p class="para">
+																<div class="example" id="example-8">
+																	<div class="example-contents">
+																		<div class="phpcode"><code><span
+																					style="color: #000000">
+																					&nbsp;<span
+																						style="color: #0000BB">&lt;?php&nbsp;</span>
+																					<br> <span style="color: #0000BB">
+																						$age = 99;&nbsp;</span> <br>
+																					<span
+																						style="color: #0000BB">switch($age){//نحدد
+																						المتغير الذي نريد ان نتعامل
+																						معه&nbsp;</span> <br> <span
+																						style="color: #0000BB">case
+																						10://هنا نقول في حالة ما أذا كان
+																						المتغير المتعامل معه يساوي10
+																					</span> <br> <span
+																						style="color: #0000BB">echo "أنت
+																						طفل ";</span> <br> <span
+																						style="color: #0000BB">break;</span>
+																					<br> <span
+																						style="color: #0000BB">case
+																						25://هنا نقول في حالة ما أذا كان
+																						المتغير المتعامل معه يساوي25
+																					</span> <br> <span
+																						style="color: #0000BB">echo "أنت
+																						رجل ";</span> <br> <span
+																						style="color: #0000BB">break;</span>
+																					<br> <span
+																						style="color: #0000BB">case
+																						99://هنا نقول في حالة ما أذا كان
+																						المتغير المتعامل معه يساوي99
+																					</span> <br> <span
+																						style="color: #0000BB">echo "أنت
+																						رجل مسن";</span> <br> <span
+																						style="color: #0000BB">break;</span>
+																					<br> <span
+																						style="color: #0000BB">case
+																						130://هنا نقول في حالة ما أذا
+																						كان المتغير المتعامل معه
+																						يساوي130 </span> <br> <span
+																						style="color: #0000BB">echo "أنت
+																						رجل مسن جدا جدا";</span> <br>
+																					<span
+																						style="color: #0000BB">break;</span>
+																					<br> <span
+																						style="color: #0000BB">default:</span>
+																					<br> <span
+																						style="color: #0000BB">echo
+																						"نعتذر ليس لدينا اي جمل تناسب
+																						عمرك ";</span> <br> <span
+																						style="color: #007700">}</span>
+																				</span>
+																			</code></div>
+																	</div>
+																</div>
+																<div class="example-contents">
+																	<p>
+																		خرج طباعة هذا المثال سوف يكون مثل هذا
+																	</p>
+																</div>
+																<div class="example-contents screen">
+																	<div class="cdata ">
+																		<pre>
+																				أنت رجل مسن
+																			</pre>
+																	</div>
+
+																</div>
+																<pre>
+																	كما نلاحظ الأمر بسيط حيث نقوم بوضع احتمالات التي ممكن تقع ونربط كل احتمال بامر معني.
+																	وهنا الأحتمال الصحيح هو case 99:
+																	وعليه فالنتيجة كما هو متوقع ستكون : أنت رجل مسن
+																	 الأمر default:
+																	هو الأمر الذي يقع في حالة لم يتحقق اي احتمال يعني لو غيرت مثال قيمة المتغير age ووضعنا قيمة غير موجودة في الأحتمالات مثال :
+																	$age=10;
+																	فالنتيجة ستكون :
+																	نعتذر ليس لدينا اي جمل تناسب عمرك 
+																	اما بالنسبة للأمر break;
+																	فهو مهم جدا حيث تكمن وظيفته في الخروج من الدالة switch في حالة تحقق الأحتمال، دون ان يتابع قرأت باقي الأحتماالات .
+																	ولنتحقق من الأمر سوف نعدل في المثال الأخير ونضع فيه احتمال 130 الرقم 99 كذلك
+																	سوف يتحقق الأحتمال 99 الأول ولن يتحقق الثاني وذلك بسبب الأمر break الذي خرج من الدالة ولم يتابع القراءة.
+																	لكن ماذا لو حذفنا الأمر break المرتبط بالأحتمال 99 الأول ؟؟
+																	سوف يتم متابعة القرأة وسنحصل على الأمر المرتبط بلأحتمال الأول 99 وايضا الأمر المرتبط بالأحتمال الثاني 99.
+																	
+												</div>
+												<div class="example" id="example-7">
+													<div>
+														<p class="text-center"><strong> (match) مثال#1أستخدم العبارة </strong></p>
+														<p>
+															هي دالة شرطية شبيهة بدالة switch 
+															تستخدم للتحقق من أن القيم المسندة في شرط الدالة  تساوي القيم الأخري 
+														</p>
+													</div>
+													<p class="para">
+														<div class="example" id="example-8">
+															<div class="example-contents">
+																<div class="phpcode"><code><span style="color: #000000">
+																			&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+																				style="color: #0000BB"> $food="cake";&nbsp;</span> <br> <span
+																				style="color: #0000BB"> $return_value = match($food){&nbsp;</span> <br>
+																			<span style="color: #0000BB">
+																				'apple' => 'This food is an apple',
+																				'bar' => 'This food is a bar',
+																				'cake' => 'This food is a cake',
+																			}; </span>
+																			<br> <span style="color: #0000BB">var_dump($return_value);
+																			</span> <br> <span></span>
+																			
+																	</code></div>
+															</div>
+														</div>
+														<div class="example-contents">
+															<p>
+																خرج طباعة هذا المثال سوف يكون مثل هذا
+															</p>
+														</div>
+														<div class="example-contents screen">
+															<div class="cdata ">
+															<pre>
+																	string(19) "This food is a cake"
+
+															</pre>
+															</div>
+						
+														</div>
+		</div>
+		</p>
+		</h1>
+		
+	</section>
+	<!--/ الشروط --> 
+
+	<!-- الحلقات  -->
+	<section>
+		<div id="loops" class="section">
+			<hr />
+			<div class=" text-center">
+				<h1 class="title"> الحلقات loops </h1>
+			</div>
+			<p class="para text-center">
+				<p> while </p>
+				<p>	for </p>
+				<p>foreach</p>
+			</p>
+			
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p class="text-center"><strong>مثال  الحلقة while #1</strong></p>
+							<p>
+								تعتبر الحلقة while
+								من أسهل الحلقات في لغة php
+								يمكن تلخصيها بمثال بسيط أذا أردنا أن نطبع الجملة : السلام عليكم ورحمه الله وبركاته 100 مرة
+								فبأستخدام الحلقة while
+								يمكن تنفيذ ذلك بكتابة جملة واحده 
+								وبدونها سوف نكتب جملة الطباعه 100 مرة
+							</p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span>  <br> <span
+														style="color: #0000BB">$alsamalekoum=1;&nbsp;</span> <br> <span
+														style="color: #0000BB"> while($alsamalekoum &lt;= 100){ &nbsp;</span> <br> <span
+														style="color: #0000BB"> $alsamalekoum++; &nbsp;</span> <br> <span
+														style="color: #0000BB">echo "السلام عليكم";}</span> <br> </span>
+														
+													</span>
+											</code></div>
+							</div>	</div>
+							<div class="example-contents">
+								<p>
+									خرج طباعة هذا المثال سوف يكون مثل هذا 
+								</p>
+							</div>
+							<div class="example-contents screen">
+								<div class="cdata ">
+										<pre>
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام
+											عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام
+											عليكم السلام عليكم السلام عليكم السلام عليكم
+											السلام عليكم السلام عليكم السلام عليكم السلام
+											عليكم السلام عليكم السلام عليكم السلام عليكم 
+											السلام عليكم السلام عليكم السلام عليكم السلام
+											عليكم السلام عليكم السلام عليكم السلام عليكم
+										</pre>
+														</div>
+														<p>
+															ولنبدأ بكفية عمل حلقة تكرار باستخدام الدالة while السهلة.
+															جاء في تعريفنا للحلقات بانها صيغة لعمل تكرار لتعليمات معينة
+															نحددها نحن، وهذا يعني ان هذا التكرار سيستمر حتى بعد الوصول
+															الى
+															اخر تعليمة ثم يبدأ من جديد التكرار بدون توقف حتى النهاية ثم
+															يعود للبداية وهكذا .. التكرار مستمر
+															ولهذا فنحن بحاجة ماسة الى شرط يوقف هذا التكرار ويجعلنا نتحكم
+															فيه
+															هذا الشرط يتم بواسط الدالة while
+															صيغة كتابه
+															إذا حاولنا تطبيق هذا الكود سنحصل على الجملة :"السلام عليكم"
+															، مائة مرة وبدون اي عناء
+															وكشرح للمثال ، فاول شيء بدأنا به هو وضع متغير
+															وإعطائه قيمة 1 وهي قيمة البداية التي نريد ان يبدا منها
+															التكرار، ثم بعد ذلك استعملنا دالتنا المدروسة وقلنا مادم
+															الشرط لم يتغير
+															اصغر من او يساوي 100
+															فاالمطلوب هو إظهار الجملة: السلام عليكم
+															ومنا اننا نريد ان تتكرر هذة العملية فقد وضعنا ان المتغير
+															يساوي
+															نفسه زائد واحد
+															حتى نضمن ان قيمة المتغير في تصاعد اي تتغير
+															وهذا سيجعل الكومبيوتر يعود للقرءاة من بداية الحلقة ولن يخرج
+															من الحلقة الا بعد إختلال الشرط يعني حتي تصبح قيمة المتغير
+															فوق 100
+															اظن ان المسألة اصبحت واضحة.
+														</p>
+
+
+														<p class="para">
+															<div class="example" id="example-7">
+																<div>
+																	<p class="text-center"><strong>مثال الحلقة
+																			for#1</strong></p>
+																	<p>
+																		لا يوجد فرق بين الحلقه while و for
+																		فالنتيجة واحدة
+																	</p>
+																</div>
+																<p class="para">
+																	<div class="example" id="example-8">
+																		<div class="example-contents">
+																			<div class="phpcode"><code><span
+																						style="color: #000000">
+																						&nbsp;<span
+																							style="color: #0000BB">&lt;?php&nbsp;</span>
+																						<br> <span
+																							style="color: #0000BB">
+																							for($alsamalekoum=1;
+																							$alsamalekoum &lt;= 100;
+																								$alsamalekoum++ ){
+																								&nbsp;</span> <br> <span
+																									style="color: #0000BB">echo
+																									"السلام
+																									عليكم";}</span> <br>
+																						</span>
+
+																					</span>
+																				</code></div>
+																		</div>
+																	</div>
+																	<div class="example-contents">
+																		<p>
+																			خرج طباعة هذا المثال سوف يكون مثل هذا
+																		</p>
+																	</div>
+																	<div class="example-contents screen">
+																		<div class="cdata ">
+																			<pre>
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم 
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام
+														عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام
+														عليكم السلام عليكم السلام عليكم السلام عليكم
+														السلام عليكم السلام عليكم السلام عليكم السلام
+														عليكم السلام عليكم السلام عليكم السلام عليكم 
+														السلام عليكم السلام عليكم السلام عليكم السلام
+														عليكم السلام عليكم السلام عليكم السلام عليكم
+													</pre>
+																		</div>
+																	</div>
+
+
+															</div>
+															<p class="para">
+																<div class="example" id="example-7">
+																	<div>
+																		<p class="text-center"><strong>مثال  الحلقة foreach #1</strong></p>
+																		<p>
+																			تستخدم الحلقة foreach
+																			لعبور المصفوفات 
+																		</p>
+																	</div>
+																	<p class="para">
+																		<div class="example" id="example-8">
+																			<div class="example-contents">
+																				<div class="phpcode"><code><span style="color: #000000">
+																								&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span>  <br> <span
+																									style="color: #0000BB">$colors = array('الأحمر', 'الأزرق', 'الأخضر', 'الاصفر');</span> <br> <span																								</span> <br> <span
+																									style="color: #0000BB">foreach ($colors as $color) {</span> <br> <span
+																									style="color: #0000BB">}</span> <br> <span
+																									style="color: #0000BB">echo "  ?\n $color :هل تحب اللون";</span> <br> <span></span>
+																								</span>
+																						</code></div>
+																		</div>	</div>
+																		<div class="example-contents">
+																			<p>
+																				خرج طباعة هذا المثال سوف يكون مثل هذا 
+																			</p>
+																		</div>
+																		<div class="example-contents screen">
+																			<div class="cdata ">
+																					<pre>
+																						? الأحمر :هل تحب اللون ? الأزرق :هل تحب اللون ? الأخضر :هل تحب اللون ? الاصفر :هل تحب اللون
+																					</pre>
+																			</div>
+		</section>
+		<!--  الحلقات  -->
+		<!-- الدوال functions PHP -->
+		<section>
+			<div id="function" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title">الدوال المعرفة مسبقا في لغه php</h1>
+				</div>
+				<p class="para text-center">
+					هي مجموعه من الدوال المجهزة مسبقا في لغة
+					php
+					وظيفتها
+					- ارسال ملفات الى السيرفر
+					- انشاء صور
+					- ارسال رسالة الى البريد الألكتروني
+					- الرسم والكتابة
+					- تعويض محتوى بمحتوى وكلمة بكلمة...
+					- تشفير ارقام سرية
+					- اظهار الوقت والتاريخ
+					- اعطاء معلومات عن الزائر
+					- مسح او الغاء اجراءات
+					و العديد من الوظائف الأخري
+				</p>
+
+				<section>
+
+					<div class="page-header text-center">
+						<h3> قائمة الدوال الجاهزة </h3>
+						<hr class="notop">
+					</div>
+					<p class="text-center">سوف يتم الاقتصار علي ذكر بعضها حيث انها كثيرة جدا و يمكنك مراجعه دليل php
+						الرسمي المرفق مع هذا الكتاب </p>
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary"></h6>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+									<thead>
+										<tr>
+											<th scope="col">strlen</th>
+											<th scope="col">STR_REPLACE</th>
+											<th scope="col">STR_SHUFFLE</th>
+											<th scope="col">STRTOUPPER</th>
+											<th scope="col">STRTOLOWER</th>
+											<th scope="col">date()</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>بواسطة هذة الدالة نستطيع معرفة طول - واقصد هنا عدد - الحروف او الأرقام
+												المكتوبة في جملة او نص ما.
+											</td>
+											<td>واضح من اسمها انها تقوم بتعويض كلمة بكلمة او حرف بحرف..
+											</td>
+											<td>دالة ظريفة لعمل خلط وتغير الأماكن الحرف بشكل عشوائي ، حيث كل مرة سنعمل
+												فيها تحديث للصفحة سنحصل على تشكيل جديد
+												للحروف.
+											</td>
+											<td>وظيفة هذه الدالة تتجلى في التحكم في حالة الأحرف ، حيث انها تجعل الحروف
+												كبيرة.
+											</td>
+											<td>وظيفة هذه الدالة تتجلى في التحكم في حالة الأحرف ، حيث انها تجعل الحروف
+												صغيرة.
+											</td>
+											<td>الوقت والتاريخ الموجود في الجهاز </td>
+
+										</tr>
+									</tbody>
+								</table>
+								<div>
+
+				</section>
+
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #1</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB"> $sentence="السلام عليكم ورحمه الله وبركاته";
+													&nbsp;</span> <br> <span
+													style="color: #0000BB">$length=strlen($sentence);</span> <br> <span
+													style="color: #0000BB">echo " عدد الأحرف في هذه الجملة $sentence هو
+													: $length "; </span> <br> <span></span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											عدد الأحرف في هذه الجملة السلام عليكم ورحمه الله وبركاته هو : 58
+										</pre>
+									</div>
+								</div>
+
+							</div>
+
+
+					</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #2</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB">$sentence=STR_REPLACE('مساء الخير' , 'صباح
+													الخير' , 'مساء الخير أستاذ محمد ' );</span> <br> <span
+													style="color: #0000BB">echo $sentence; </span> <br> <span></span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+										صباح الخير أستاذ محمد
+										</pre>
+									</div>
+								</div>
+
+							</div>
+
+
+					</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #3</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span><br> <span
+													style="color: #0000BB">$sentence="Iam a php
+													programmer";&nbsp;</span> <br> <span
+													style="color: #0000BB">$new=STR_SHUFFLE($sentence);</span> <br>
+												<span style="color: #0000BB">echo $new; </span> <br> <span></span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+															h pmeaprgmmr I aropa
+														</pre>
+									</div>
+								</div>
+
+							</div>
+
+
+					</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #4</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB">$sentence="this is an upper letters";
+													&nbsp;</span> <br> <span
+													style="color: #0000BB">$letters=STRTOUPPER($sentence);</span> <br>
+												<span style="color: #0000BB">echo $letters; </span> <br> <span></span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+																	THIS IS AN UPPER LETTERS
+										</pre>
+									</div>
+								</div>
+
+							</div>
+
+
+					</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #5</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB"> $sentence="THIS IS AN UPPER LETTERS AND WILL
+													BE LOWER "; &nbsp;</span> <br> <span
+													style="color: #0000BB">$NEW=STRTOLOWER($sentence);</span> <br> <span
+													style="color: #0000BB">echo $NEW; </span> <br> <span></span>
+										</code></div>
+								</div>
+
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+										this is an upper letters and will be lower
+										</pre>
+									</div>
+								</div>
+
+							</div>
+
+
+					</div>
+				</p>
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>مثال #6</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB"> $hour=date('H'); &nbsp;</span> <br> <span
+													style="color: #0000BB"> $minutes=date('i'); &nbsp;</span> <br> <span
+													style="color: #0000BB"> $day=date('d'); &nbsp;</span> <br> <span
+													style="color: #0000BB"> $month=date('m'); &nbsp;</span> <br> <span
+													style="color: #0000BB"> $year=date('y'); &nbsp;</span> <br> <span
+													style="color: #0000BB">echo "الوقت و التاريخ الأن هو : $hour :
+													$minutes] [ $day/$month/$year]";</span> <br> <span></span>
+										</code></div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata">
+										<pre>
+										الوقت و التاريخ الأن هو : [16 : 26] [ 23/12/21]
+										</pre>
+									</div>
+								</div>
+							</div>
+					</div>
+				</p>
+			</div>
+			</p>
+
+	</section>
+	<!-- الدوال functions PHP -->
+	<!-- المصفوفات array PHP -->
+	<section>
+		<div id="array" class="section">
+				<hr />
+				<div class=" text-center">
+					<h1 class="title">المصفوفات في لغة php</h1>
+				</div>
+				
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p><strong>
+								مثال 
+								arrays Associative
+							</strong></p>
+							<p class="para text-center">
+								لا شك انكم مازلتم تتذكرون انه سبق لنا وأن مررنا باسم مصفوفة في دروسنا السابقة وقلنا على ان المصفوفة array 
+								هي عبارة عن متغير ، وفعلا هي كذلك لكن متغير اكثر تشعبية، يحتوي على مجموعة من العناصر لها قيم معينة.
+								كيف؟؟
+								دعونا نضرب مثال بسيطا لنفهم معنى المصفوفة.
+								وسنشبه المصفوفة هنا بحافلة بها 30 مقعدا
+								في كل مقعد يجلس شخص معني
+								إذن:
+								الحافلة هي عبارة عن مصفوفة
+								والثلاثين مقعدا هم عناصر المصفوفة حيث ان المقاعد تنتمي للحافلة
+								و الأشخاص الذين يجلسون على المقاعد الخاصة بالحافلة، هم قيم عناصر المصفوفة.
+								وحتى ندقق اكثر في معنى المصفوفة، فالمصفوفة هي عبارة عن جدول بالضبط
+								ندخل فيه المعلومات او المعطيات التي نريد.
+								,مثال: بطاقة تعريف
+								,الأسم : ياسني
+								,الجنسبة: مغربية
+								,المدينة : ميدلت
+								,رقم الهاتف: 212000000000
+								وهناك نوعان من الجدوال 
+								- نوع يسمى بـ الجدوال التجميعية
+								- ونوع اخر يسمى بـ الجداول المرقمة
+								وسندرس ان شاء الله فيما يلي، كل نوع على حدا.
+								
+							</p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="example-contents">
+										<div class="phpcode"><code><span style="color: #000000">
+													&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+														style="color: #0000BB">//سنسمي المصفوفة هنا بالأسم Identification_card &nbsp;</span> <br> <span
+														style="color: #0000BB"> $Identification_card=array("name"=>"yassine","nationality" => "Moroccan","city" => "Midelt", "phone_number" => "Marseille"); &nbsp;</span> <br> <span
+														style="color: #0000BB"> print_r $Identification_card; &nbsp;</span> <br> <span></span>
+														
+											</code></div>
+									</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											Array ( [name] => yassine [nationality] => Moroccan [city] => Midelt [phone_number] => Marseille )
+										</pre>
+									</div>
+								</div>
+							</div>
+					</div>
+				</p>
+
+				<p class="para">
+					<div class="example" id="example-7">
+						<div>
+							<p>مثال: هو نفس المثال السابق الجداول التجميعية
+								وسنلاحظ ان ذلك الجدول في المثال يتعمد في ترتيبه وتسسله على كلمات نحن اخترناها بذلك الترتيب:
+								(الأسم - الجنسية - المدينة - رقم الهاتف)
+								وعليه فنحن نعتمد الجدول في ترتيب قيم عناصره على كلمات حروف ،اسماء او افعال(
+								فإن ذلك الجدول يسمى بجدول تجميعي
+								(arrays Associative)
+								إذن
+								اسم المصفوفة هنا سيكون هو : بطاقة تعريف
+								عناصر المصفوفة: الأسم - الجنسية - المدينة - رقم الهاتف
+								قيم عناصر المصفوفات : ياسني - مغربية - ميدلت - 212000000000
+								ترجمة ذلك في لغة php
+								لقد عرفنا بشكل نظري وعام كيف هي المصفوفة التجميعية والأن سنتطرق الى طريقة كتابة تلك المصفوفة في php
+								فقط سنعتمد على اللغة الأنجليزية في كتابة المثال السابق
+							</p>
+							<p><strong>مثال #6</strong></p>
+						</div>
+						<p class="para">
+							<div class="example" id="example-8">
+								<div class="example-contents">
+									<div class="phpcode"><code><span style="color: #000000">
+												&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+													style="color: #0000BB">//سنسمي المصفوفة هنا بالأسم Identification_card &nbsp;</span> <br> <span
+													style="color: #0000BB"> $Identification_card=array('Sutrday','friday','Thursday','Wednesday','Tuesday','Monday','Sunday); &nbsp;</span> <br> <span
+													style="color: #0000BB"> print_r $Identification_card; &nbsp;</span> <br> <span></span>
+													
+										</code></div>
+								</div>
+								<div class="example-contents">
+									<p>
+										خرج طباعة هذا المثال سوف يكون مثل هذا
+									</p>
+								</div>
+								<div class="example-contents screen">
+									<div class="cdata ">
+										<pre>
+											Array ( [0] => Sutrday [1] => friday [2] => Thursday [3] => Wednesday [4] => Tuesday [5] => Monday [6] => Sunday )
+										</pre>
+									</div>
+								</div>
+							</div>
+					</div>
+				</p>
+		</div>
+	</section>
+	<!-- المصفوفات array PHP -->
+
+	<!-- المتغيرات variables PHP -->
+	<section>
+		<div id="variables" class="section">
+			<hr />
+			<div class=" text-center">
+				<h1 class="title">المتغيرات في لغة php </h1>
+			</div>
+			<p class="para text-center">
+				من العناصر الرئيسية في أي لغة
+				ووظيفتها تخزين المعلومات في الذاكرة بصورة مؤقتة
+				ويتكون المتغير من عنصرين أساسين هما
+				- الاسم : وهو يدل على اسم معني نختاره نحن لـ متغير نريد استعماله.
+				- والقيمة: وهي المعلومة التي نريد ان يحملها المتغير والتي تتحول.
+				و يجب ان ننسى ان المتغيرات التي ننشيء يجب ان تبتدأ بعلامة الدولار : $
+				وكمسلمة : اي اسم يبتدأ بعلامة الدولار $ هو عبارة عن متغير.
+			</p>
+			<section>
+				<div class="page-header text-center">
+					<h3> أنواع المتغيرات في لغة php </h3>
+					<hr class="notop">
+				</div>
+				<p class="text-center">القصد هنا هو أنواع البيانات التي يمكن تخزينها في المتغيرات</p>
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary"></h6>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+									<tr>
+
+										<th scope="col">string</th>
+										<th scope="col">int</th>
+										<th scope="col">float</th>
+										<th scope="col">bool</th>
+										<th scope="col">null</th>
+										<th scope="col">array</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>هذا النوع من المتغيرات خاص بالنصوص والقيمة بهذا النوع تكون دائمة بين
+											علامتي تنصيص مزدوجة او فردية</td>
+										<td> الارقام الطبيعية أو الصحيحة</td>
+										<td>وهي الارقام التي تحتوي على الفاصلة العشرية</td>
+										<td>هو متغير منطقي يحتمل اكثر من قيمتين: false or true </td>
+										<td>قيمة فارغة يعني عندما ننشىء متغير ونعطيه اي قيمة فيكون هذا المتغير فارغ
+										</td>
+										<td> راجعها في قسم المصفوفات </td>
+
+									</tr>
+								</tbody>
+							</table>
+							<div>
+								<p>
+									<h1> ملاحظات مهمة : </h1>
+									<p> هناك قواعد عند كتابة المتغيرات يجب ان يتم مراعتها </p>
+									<p>
+										1 -جميع اسماء المتغيرات لا يجب ان تبتدأ برقم بعد علامة الدولار مباشرة
+										، مسموح يحتوي الاسم على رقم لكن الغير مسموح به هو ان
+										يكون هذا الرقم هو الأول في الأسم </p>
+									<p>
+										2-اسماء المتغيرات حساسة لوضعية الأحرف فالمتغير
+										$name ليس هو المتغير $Name </p>
+									<p> 3-امكانية استخدام العلامة : _ علامة underscore في بداية او داخل اسم المتغير
+										لكن يرجي ملاحظة انه هناك متغيرات محجوزة في اللغه لا يمكن أستخدامهاو تسمي
+										بالسوبر جلوبال super global variables ويحتوي الجدول التالي عليها
+									</p>
+									<div class="card shadow mb-4">
+										<div class="card-header py-3">
+											<h6 class="m-0 font-weight-bold text-primary"></h6>
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table table-bordered" id="dataTable" width="100%"
+													cellspacing="0">
+													<thead>
+														<tr>
+															<th scope="col">$GLOBALS</th>
+															<th scope="col">$_SERVER</th>
+															<th scope="col">$_GET</th>
+															<th scope="col">$_POST</th>
+															<th scope="col">$_FILES</th>
+															<th scope="col">$_REQUEST</th>
+															<th scope="col">$_SESSION</th>
+															<th scope="col">$_ENV</th>
+															<th scope="col">$_COOKIE</th>
+															<th scope="col">$php_errormsg</th>
+															<th scope="col">$http_response_header</th>
+															<th scope="col">$argc</th>
+															<th scope="col">$argv</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>المصفوفة An associative array هي مصفوفة مفتاحية أو
+																تجميعية تحتوي علي مرجعية لكل المتغيرات التي قد تم
+																تعريفها في المنظار العام للأسكربت . وأسماء المتغيرات
+																هي مفتاح هذه المصفوفة.
+															</td>
+															<td> المدخلات في هذه المصفوفة تم أنشائها بواسطة الخادم
+																وليس هناك أي ضمانه علي انه اي خادم ويب سوف يزودك
+																بهذه المعلومات سوف تجد المزيد من المعلومات بخصوص هذا
+																في التوثيق الرسمي ل CGI/1.1 specification , هي
+																مصفوفة تحتوي علي معلومات كا الهيدرز والمسارات واماكن
+																الاسكربتات </td>
+															<td>HTTP GET variables </td>
+															<td>HTTP POST variables</td>
+															<td>HTTP File Upload variables</td>
+															<td> HTTP Request variables </td>
+															<td>Session variables</td>
+															<td>Environment variables</td>
+															<td>HTTP Cookies</td>
+															<td>The previous error message</td>
+															<td>HTTP response headers</td>
+															<td>The number of arguments passed to script </td>
+															<td>Array of arguments passed to script</td>
+
+
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<p></p>
+								</p>
+							</div>
+			</section>
+			<p class="para">
+				<div class="example" id="example-7">
+					<div>
+						<p><strong>مثال #1</strong></p>
+					</div>
+					<p class="para">
+						<div class="example" id="example-8">
+							<div class="example-contents">
+								<div class="phpcode"><code><span style="color: #000000">
+											&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span> <br> <span
+												style="color: #0000BB"> $name ='yassine'; &nbsp;</span> <br> <span
+												style="color: #0000BB"> $age = '22 سنة'; </span> <br> <span
+												style="color: #0000BB"> echo $name,$age; </span> <br> <span
+												style="color: #0000BB"> $age = '12 سنة'; </span> <br> <span
+												style="color: #0000BB"> echo $age , $name; </span><br /><span
+												style="color: #007700"> الخرج الان سوف يكون 12 سنة#</span>
+									</code></div>
+							</div>
+
+							<div class="example-contents">
+								<p>
+									خرج طباعة هذا المثال سوف يكون مثل هذا
+								</p>
+							</div>
+							<div class="example-contents screen">
+								<div class="cdata">
+									<pre>
+										22 سنة12 سنةyassine
+									</pre>
+								</div>
+							</div>
+							<div class="example-contents">
+								<p> تمرين المتغيرات
+									أكتب متغيرات تحمل القيم التالية
+									<div class="htmlcode">
+										<pre class="htmlcode">
+										name,age,city,country
+									</pre>
+									</div>
+								</p>
+								<div class="example-contents">
+									<p> ثم قم بأستخدام هذه المتغيرات لطباعه الجملة التالية
+										<div class="htmlcode">
+											<pre class="htmlcode">
+											.أسمي هو محمود عمري هو 27 عام أعيش في القاهرة وأنا من مصر 
+										</pre>
+										</div>
+									</p>
+								</div>
+								<div class="example-contents">
+									<p> الكود المستخدم في هذا التمرين هو
+										<div class="htmlcode">
+											<div class="phpcode"><code><span style="color: #000000">
+														&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;</span>
+														<br> <span style="color: #0000BB"> $name ='mahmoud';
+															&nbsp;</span> <br> <span style="color: #0000BB"> $age =
+															'27 عام'; </span> <br> <span style="color: #0000BB">
+															$country = 'مصر';</span> <br> <span
+															style="color: #0000BB"> $city = 'القاهرة'; </span> <br>
+														<span style="color: #0000BB"> print " .أسمي هو $name عمري هو
+															$age أعيش في $city و أنا من $country ";<br><span
+																style="color: #007700"># ملاحظة : انة تم وضع الكود
+																بين علامتي تنصيص وذلك حتي تستطيع كتابه المتغيرات
+																بداخل الكود </span>
+
+												</code></div>
+										</div>
+										<p class="text-center"> جرب أستخدام علامة التنصيص الأحادية ولنري ماذا سوف
+											يحدث عند الطباعة </p>
+										<div class="htmlcode">
+											<pre class="htmlcode">
+												.أسمي هو $name عمري هو $age أعيش في $city و أنا من $country 
+											</pre>
+										</div>
+									</p>
+									<p class="text-center"> سؤال : لكن لماذا حدث هذا؟
+									</p>
+									<p class="text-center"> بكل بساطة علامتي التنصيص الثنائية تستخدم فيما يسمي
+										بالهروب من html  لاحقا
+									</p>
+								</div>
+							</div>
+						</div>
+					</p>
+				</div>
+			</p>
+		</div>
+	</section>
+	<!-- المتغيرات variables PHP -->
+	<!-- المصادر-->
+	<section id="source">
+		<h1 class="title">المصادر</h1>
+		<h1 class="text-center">  دليل php الرسمي الأصدار بتاريخ : 2021-11-29 </h1>
+		<h1 class="text-center">الزيرو ويب سكول : فيديو تثبيت xampp </h1>
+		<h1 class="text-center">  كتاب أساسيات لغة PHP
+			للكاتب : ياسني ابوالشريف
+		</h1>
+	</section>
+	<!--/ نهاية المصادر -->
+	</div>
+	<script src="doc/assets/js/jquery.js"></script>
+	<script src="doc/assets/js/jquery.scrollTo.js"></script>
+	<script src="doc/assets/js/jquery.easing.js"></script>
+	<script src="doc/assets/js/script.js"></script>
+</body>
+
+</html>
